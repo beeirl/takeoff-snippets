@@ -27,7 +27,7 @@ func addListener(_ query: Query) -> AnyPublisher<[DocumentChangeType: [M]], Take
 
 func addListener(_ id: String) -> AnyPublisher<M?, TakeoffError> {
     let ref = db
-        .collection("game")
+        .collection("games")
         .document(id)
 
     return Publishers.DocumentSnapshotPublisher(ref: ref)
